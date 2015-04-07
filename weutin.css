@@ -1,0 +1,215 @@
+@font-face {
+  font-family: Comf-Bold;
+  src: url(./fonts/Comfortaa_Bold.ttf);      
+}
+@font-face {
+  font-family: BELLABOO;
+  src: url(BELLABOO.ttf );      
+}
+@font-face {
+  font-family: simple;
+  src: url(Montserrat-Hairline.woff);        
+}
+
+body{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;  
+	background-image: url(cabin.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow-x:hidden; 
+	margin: 0;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+*{
+	cursor:default;
+}
+
+.section{
+		background-color:rgba(0,0,0,0.6);
+	
+	}
+
+
+#title{
+	z-index: 5;
+	width: 100%;
+	text-align: center;
+	height:70px;
+	font-size: 4.5em;
+	font-family: BELLABOO;
+	position: absolute;
+	top:35%;
+	color: white;
+			opacity: 0;
+		-webkit-transition:  opacity 2300ms;
+		-moz-transition:     opacity 2300ms;
+		-ms-transition:      opacity 2300ms;
+		transition:          opacity 2300ms;
+}
+
+
+#motto{
+	z-index: 5;
+	-webkit-transition:  opacity 2300ms;
+	-moz-transition:     opacity 2300ms;
+	-ms-transition:      opacity 2300ms;
+	transition:          opacity 2300ms;
+	width: 100%;
+	text-align: center;
+	height:70px;
+	font-size: 0.9em;
+	font-family: simple;
+	position: absolute;
+	top:calc(35% + 100px);
+	color: white;
+	line-height: 150%;
+	text-transform: uppercase;
+	opacity: 0;
+
+}
+.button{
+left:0px;
+font-size: 1em;
+font-family: simple;
+color: white;
+margin: 10px;
+position: fixed;
+top:0px;
+z-index: 3;
+}
+
+#login{
+	right:0px;
+	left: auto;
+}
+
+#section2{
+		background-color:rgba(0,0,0,0.9);
+		position: relative;
+	}
+
+#profile_box{
+	position: absolute;
+	right:15%;
+	top:calc(50% - 160px);
+	-webkit-border-radius:8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;	
+	height:120px;
+	width: 300px;
+	background-color: rgba(100, 97, 97, 0.9);
+	-webkit-transition:  150ms linear;
+	-moz-transition:  150ms linear;
+	-ms-transition:  150ms linear;
+	transition:  150ms linear;
+	overflow: hidden;
+}
+#profile_box:hover{
+height:235px;
+top:calc(50% - 160px);
+}
+
+
+
+#profile_info{
+	font-family: simple;
+	color:black;
+	text-align: left;
+	font-size: 0.9em;
+	position: absolute;
+	line-height: 200%;
+	right: 20px;
+	top:20px;
+}
+#profile_pic{
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	height: 85px;
+	position: absolute;
+	left:20px;
+	top: 16px;
+}
+.info{
+	font-family: simple;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+
+/*	border-top: 1px solid black;*/
+	height:20px;
+	background-color: none;
+	width:280px;
+	position: absolute;
+	top:120px;
+}
+#info2{
+	top:160px;
+}
+#info3{
+	top:200px;
+}
+.right{
+	margin: 0px !important;
+
+	float: right;
+}
+.left{
+	margin: 0px !important;
+	float: left;
+}
+
+#text_box{
+	position: absolute;
+	left:10%;
+	top:calc(50% - 200px);
+	width:500px;
+	height: 500px;
+
+	text-align: justify;
+	font-size: 1.2em;
+	font-family: simple;
+	color:#e0e0e0;
+}
+
+h1{
+	font-size: 2.2em;
+	font-family: simple;
+	text-align: center;
+	color:#e0e0e0;
+}
+
+#profile_box2{
+	position: absolute;
+	right:15%;
+	top:calc(50% - 10px);
+	-webkit-border-radius:8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;	
+	height:120px;
+	width: 300px;
+	background-color: rgba(100, 97, 97, 0.9);
+	-webkit-transition:  150ms linear;
+	-moz-transition:  150ms linear;
+	-ms-transition:  150ms linear;
+	transition:  150ms linear;
+	overflow: hidden;
+}
+#profile_box2:hover{
+height:235px;
+
+}
+
+#profile_box:hover ~ #profile_box2{
+top:calc(50% + 105px);
+
+}
