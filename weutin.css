@@ -249,13 +249,29 @@ top:calc(50% + 105px);
 }
 
 #fullname{
-	top:calc(40%);
+	top: calc(40%);
 }
 #email{
-	top:calc(40% + 60px);
+	top: calc(40% + 60px);
 }
 #password{
-	top:calc(40% + 120px);
+	top: calc(40% + 120px);
+}
+
+#loginDiv {
+	position: absolute;
+	top: calc(3.5% - 20px);
+	left: calc(90% - 500px);
+	width: 700px;
+	z-index: 1;
+}
+
+#emailLogin {
+	left: 0%;
+}
+
+#passwordLogin {
+	left: 240px;
 }
 
 #create_title{
@@ -285,4 +301,20 @@ top:calc(50% + 105px);
 	font-family: simple;
 	position: absolute;
 
+}
+
+#loginButton {
+	width: 100px;
+	height: 38px;
+	left: 480px;
+	line-height: 38px;
+	text-align: center;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #e0e0e0;
+	background-color:rgba(0,0,0,0);
+	color:#e0e0e0;
+	font-family: simple;
+	position: absolute;
 }

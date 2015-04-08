@@ -23,8 +23,14 @@
 
 	<div id="header">
 		<div class="button">HOME</div>
-		<div class="button" id="login">LOGIN</div>
+		<div class="button" id="login" onclick="showDiv('loginDiv');hideDiv('login')">LOGIN</div>
+		<div id="loginDiv" style="display:none">
+			<input type="email" id="emailLogin" placeholder="EMAIL"></input>
+			<input type="password" id="passwordLogin" placeholder="PASSWORD"></input>
+			<div id="loginButton" onclick="submitLoginData()">LOGIN</div>
+		</div>
 	</div>
+
 	<div id="fullpage">
 		<div class="section" id="section1">
 			<div id="title">weutin</div>

@@ -8,6 +8,13 @@ function validateEmail(email) {
     return re.test(email);
  } 
 
+function showDiv(divName) {
+	document.getElementById(divName).style.display = "block";
+}
+function hideDiv(divName) {
+	document.getElementById(divName).style.display = "none";
+}
+
 function create_account(){
 	var email=document.getElementById('email').value;
 	var password=document.getElementById('password').value;
