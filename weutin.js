@@ -9,7 +9,8 @@ function validateEmail(email) {
  } 
 
 function showDiv(divName) {
-	document.getElementById(divName).style.display = "block";
+	document.getElementById(divName).style.visibility = "visible";
+	document.getElementById(divName).style.opacity = "1";
 }
 function hideDiv(divName) {
 	document.getElementById(divName).style.display = "none";
@@ -28,5 +29,15 @@ function create_account(){
 	}
 	else{
 		alert("ENTER YOUR DETAILS CORRECTLY MR. TOTS");
+	}
+}
+
+function submitLoginData(){
+	var email=document.getElementById('emailLogin').value;
+	var password=document.getElementById('passwordLogin').value;
+
+	if(password!=""  & validateEmail(email)){
+	window.location.href = "login.php?email=" + email + "&password=" + password;
+	// alert("login.php?email=" + email + "&password=" + password);
 	}
 }
