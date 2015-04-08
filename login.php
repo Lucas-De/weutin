@@ -36,7 +36,8 @@ $dbname = "u708071212_login";
 	    	$ENTERED_password= crypt($_GET['password'], sprintf('$2y$%02d$',9) . "U1N2C3R4A5C6K7A8B9L0E");
 	    	// echo $ENTERED_password;
 	    	if($ENTERED_password == $DBpass){
-	    		echo "login success bitch!";
+	    		echo "login success";
+	    		header("Location: http://yatcher.com/profile.html");
 	    	}
 	    	else{
 	    		echo "login failed";

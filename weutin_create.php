@@ -43,70 +43,65 @@ if($_GET['email']!=""){
 
 
 	if ($conn->query($strSQL) === TRUE) {
-	    echo "New record created successfully";
-	    header("Location: http://littlefacemitt.com/");
-	} else {
+	    echo "Account created successfully. Please check your email and verify your account";
+	
+		$message = "
+		<html>
+			<head>
+				<style>
+					@font-face {
+					font-family: simple-th;
+					src: url(Montserrat-Light.woff);        
+					}
+
+					body{
+						margin: 0;
+					}
+					img{
+						
+						position: absolute;
+						margin: 0;
+						top:10px;
+						width: 170px;
+						left:calc(50% - 85px);
+					
+					}
+					h1{
+						font-size: 1.5em;
+						font-family: arial;
+						position: absolute;
+						margin: 0;
+						top:150px;
+						width: 100%;
+						text-align: center;
+						color: #595959;
+
+					}
+					a{
+						color:#ff9047 !important;
+						text-decoration:none;
+					}
+				</style>
+			</head>
+			<body>
+				<img src='http://s9.postimg.org/hs9eyeny3/logo.png'>
+				<h1>THANKS FOR SIGNING UP &#183; CLICK <a href='http://www.yatcher.com/verify.php?code=".base64_encode($_GET['email'])."'>HERE</a> TO VALIDATE YOUR ACCOUNT<h1>
+
+			</body>
+			</html>
+		";
+
+		$headers = "MIME-Version: 1.0" . "\r\n";
+		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+		$headers .= 'From: <noreply@yatcher.com>' . "\r\n";
+		mail($_GET['email'], "Verify Account", $message, $headers);
+		// header("Location: http://littlefacemitt.com/");
+	} 
+	else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 
 	$conn->close();
-
-	// mail($_GET['email'],"test", "test2","From:weutin@yatcher.com");
-
-	
-$message = "
-<html>
-	<head>
-		<style>
-			@font-face {
-			font-family: simple-th;
-			src: url(Montserrat-Light.woff);        
-			}
-
-			body{
-				margin: 0;
-			}
-			img{
-				
-				position: absolute;
-				margin: 0;
-				top:10px;
-				width: 170px;
-				left:calc(50% - 85px);
-			
-			}
-			h1{
-				font-size: 1.5em;
-				font-family: arial;
-				position: absolute;
-				margin: 0;
-				top:150px;
-				width: 100%;
-				text-align: center;
-				color: #595959;
-
-			}
-			a{
-				color:#ff9047 !important;
-				text-decoration:none;
-			}
-		</style>
-	</head>
-	<body>
-		<img src='http://s9.postimg.org/hs9eyeny3/logo.png'>
-		<h1>THANKS FOR SIGNING UP &#183; CLICK <a href='http://www.yatcher.com/verify.php?email=".$_GET['email']."'>HERE</a> TO VALIDATE YOUR ACCOUNT<h1>
-
-	</body>
-	</html>
-";
-
-
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= 'From: <noreply@yatcher.com>' . "\r\n";
-
-
-mail($_GET['email'], "Verify Account", $message, $headers);
 
 }
 else{

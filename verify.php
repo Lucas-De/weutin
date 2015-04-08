@@ -16,13 +16,14 @@ $dbname = "u708071212_login";
 	} 
 
 
-
-		$strSQL = "UPDATE Logins SET verified=1 WHERE email="."'".$_GET['email']."'";
+	$email=base64_decode($_GET['code']);
+		$strSQL = "UPDATE Logins SET verified=1 WHERE email="."'".$email."'";
 	// echo $strSQL;
 
 
 	if ($conn->query($strSQL) === TRUE) {
 	    echo "account verified";
+	    header("Location: http://yatcher.com/");
 	   
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;

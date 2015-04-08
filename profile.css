@@ -1,0 +1,39 @@
+@font-face {
+  font-family: simple;
+  src: url(Montserrat-Hairline.woff);        
+}
+
+body{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;  
+	background-image: url(cabin.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow-x:hidden; 
+	margin: 0;
+}
+a{
+	color: white !important;
+text-decoration: none !important;
+}
+.section{
+		height: 100%;
+		width:100%;
+		background-color:rgba(0,0,0,0.6);
+	
+	}
+.button{
+left:0px;
+font-size: 1em;
+font-family: simple;
+color: white !important;
+text-decoration: none !important;
+margin: 10px;
+position: fixed;
+top:0px;
+z-index: 3;
+}
