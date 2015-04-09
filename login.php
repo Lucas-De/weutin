@@ -36,7 +36,26 @@ $dbname = "u376662986_login";
 	    	$ENTERED_password= crypt($_GET['password'], sprintf('$2y$%02d$',9) . "U1N2C3R4A5C6K7A8B9L0E");
 	    	// echo $ENTERED_password;
 	    	if($ENTERED_password == $DBpass){
-	    		echo "login success";
+	    		// echo "login success";
+
+
+
+	    		$strSQL2 = "SELECT userID FROM `Logins` WHERE email='". $_GET['email'] ."'";
+	    		$result2 = mysqli_query($conn, $strSQL2);
+
+	    		 if($result2){
+	    		 	// echo "userid success";
+		    		$row2 = mysqli_fetch_row($result2);
+		    		$userID = $row2[0];
+		    		echo "userid=".$userID;
+		    		setcookie("userID", strval($userID));
+	    		}
+	    		else{
+	    			echo "userid fail";
+	    		}
+
+
+
 	    		header("Location: http://weutin.com/profile.html");
 	    	}
 	    	else{

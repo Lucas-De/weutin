@@ -3,13 +3,21 @@
 	<link rel="stylesheet" type="text/css" href="profile.css">
 	<title>Weutin</title>
 </head>
+<script src="profile.js"></script>
 
-<body>
+<body onload="picture()">
 	<div class="section" id="section1">
 	<div id="header">
 		<div class="button"><a href="index.html">HOME</a></div>
 	</div>
-</div>
+	</div>
+
+	<div id="profile_pic"></div>
+
+	<form action="upload.php" method="post" enctype="multipart/form-data">
+    	<input type="file" name="fileToUpload" id="fileToUpload">
+    	<input type="submit" value="Upload Image" name="submit" id="submit">
+	</form>
 </body>
 
 </html>
