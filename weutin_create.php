@@ -2,9 +2,9 @@
 
 
 $servername = "mysql.5freehosting.com";
-$username = "u708071212_lucas";
+$username = "u376662986_lucas";
 $password = "gunterflousje$1996";
-$dbname = "u708071212_login";
+$dbname = "u376662986_login";
 
 if($_GET['email']!=""){
 
@@ -85,7 +85,7 @@ if($_GET['email']!=""){
 			</head>
 			<body>
 				<img src='http://s9.postimg.org/hs9eyeny3/logo.png'>
-				<h1>THANKS FOR SIGNING UP &#183; CLICK <a href='http://www.yatcher.com/verify.php?code=".base64_encode($_GET['email'])."'>HERE</a> TO VALIDATE YOUR ACCOUNT<h1>
+				<h1>THANKS FOR SIGNING UP &#183; CLICK <a href='http://www.weutin.com/verify.php?code=".base64_encode($_GET['email'])."'>HERE</a> TO VALIDATE YOUR ACCOUNT<h1>
 
 			</body>
 			</html>
@@ -93,7 +93,7 @@ if($_GET['email']!=""){
 
 		$headers = "MIME-Version: 1.0" . "\r\n";
 		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-		$headers .= 'From: <noreply@yatcher.com>' . "\r\n";
+		$headers .= 'From: <noreply@weutin.com>' . "\r\n";
 		mail($_GET['email'], "Verify Account", $message, $headers);
 		// header("Location: http://littlefacemitt.com/");
 	} 
@@ -105,6 +105,6 @@ if($_GET['email']!=""){
 
 }
 else{
-	 header("Location: http://yatcher.com/");
+	 header("Location: http://weutin.com/");
 }
 ?>

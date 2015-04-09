@@ -2,9 +2,9 @@
 
 
 $servername = "mysql.5freehosting.com";
-$username = "u708071212_lucas";
+$username = "u376662986_lucas";
 $password = "gunterflousje$1996";
-$dbname = "u708071212_login";
+$dbname = "u376662986_login";
 
 
 	// Create connection
@@ -23,7 +23,7 @@ $dbname = "u708071212_login";
 
 	if ($conn->query($strSQL) === TRUE) {
 	    echo "account verified";
-	    header("Location: http://yatcher.com/");
+	    header("Location: http://weutin.com/");
 	   
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
