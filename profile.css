@@ -37,3 +37,16 @@ position: fixed;
 top:0px;
 z-index: 3;
 }
+
+
+#mainDisplayArea {
+
+	position: absolute;
+	width: 70%;
+	height: 70%;
+	left: 15%;
+	top: 15%;
+	background-color:rgba(100, 97, 97, 0.9);
+	z-index: 1;
+	border-radius: 30px;
+}

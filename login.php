@@ -21,10 +21,6 @@ $dbname = "u708071212_login";
 	// $strSQL = "SELECT password FROM `Logins` WHERE email='lucas.descause@gmail.com'";
 	$result = mysqli_query($conn, $strSQL);
 
-
-
-
-
 	if ($result) {
 	    // echo "account verified";
 
